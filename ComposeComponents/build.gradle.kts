@@ -72,7 +72,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.etf1974"
                 artifactId = "ComposeComponents"
-                version = "0.5"
+                version = "0.6"
 
             }
         }
