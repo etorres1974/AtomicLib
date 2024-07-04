@@ -16,7 +16,7 @@ android {
         consumerProguardFiles("consumer-rules.pro")
 
         aarMetadata {
-            minCompileSdk = 34
+            minCompileSdk = 24
         }
     }
 
