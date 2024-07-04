@@ -69,10 +69,10 @@ afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release"){
-                from(components["release"])
                 groupId = "com.github.etf1974"
                 artifactId = "ComposeComponents"
-                version = "0.7"
+                version = "0.8"
+                from(components["release"])
             }
         }
     }
