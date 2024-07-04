@@ -10,7 +10,9 @@ android {
 
     defaultConfig {
         minSdk = 24
-
+        //targetSdk 31
+        //versionCode 1
+        //versionName "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -30,6 +32,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+
     }
     buildFeatures {
         compose = true
@@ -59,7 +62,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.etf1974"
                 artifactId = "ComposeComponents"
-                version = "0.1"
+                version = "1.0"
 
             }
         }
