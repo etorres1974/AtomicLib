@@ -68,7 +68,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     //Local Import
-    //implementation(project(":ComposeComponents"))
+    implementation(project(":ComposeComponents"))
     //Remote Import
-    implementation(libs.atomiclib)
+    //implementation(libs.atomiclib)
 }
