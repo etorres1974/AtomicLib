@@ -30,16 +30,6 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
-    val dimensionName = "version"
-    flavorDimensions += dimensionName
-    productFlavors {
-        create("remote") {
-            dimension = dimensionName
-        }
-        create("local") {
-            dimension = dimensionName
-        }
-    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -80,6 +70,6 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     //Imports based on Flavours
-    "localImplementation"(project(":ComposeComponents"))
-    "remoteImplementation"(libs.atomiclib)
+    "releaseImplementation"(project(":ComposeComponents"))
+    "debugImplementation"(libs.atomiclib)
 }
