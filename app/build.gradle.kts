@@ -27,8 +27,20 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
+    val dimensionName = "version"
+    flavorDimensions += dimensionName
+    productFlavors {
+        create("remote") {
+            dimension = dimensionName
+        }
+        create("local") {
+            dimension = dimensionName
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -67,8 +79,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //Local Import
-    implementation(project(":ComposeComponents"))
-    //Remote Import
-    //implementation(libs.atomiclib)
+    //Imports based on Flavours
+    "localImplementation"(project(":ComposeComponents"))
+    "remoteImplementation"(libs.atomiclib)
 }
