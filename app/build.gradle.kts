@@ -69,7 +69,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //Local vs Remote
-    "releaseImplementation"(project(":ComposeComponents"))
-    //"debugImplementation"(libs.atomiclib)
+    //Local
+    implementation(project(":ComposeComponents"))
+    // Remote
+    // implementation(libs.atomiclib)
 }
