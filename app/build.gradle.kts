@@ -69,7 +69,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //Imports based on Flavours
+    //Local vs Remote
     "releaseImplementation"(project(":ComposeComponents"))
-    "debugImplementation"(libs.atomiclib)
+    //"debugImplementation"(libs.atomiclib)
 }
