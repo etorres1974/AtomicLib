@@ -8,8 +8,10 @@ android {
     compileSdk = 34
 
     publishing{
-        singleVariant("release") {
+        multipleVariants {
+            allVariants()
             withSourcesJar()
+            withJavadocJar()
         }
     }
 
@@ -72,6 +74,12 @@ afterEvaluate {
                 artifactId = "ComposeComponents"
                 version = "0.3"
                 from(components["release"])
+            }
+            create<MavenPublication>("debug"){
+                groupId = "com.github.etf1974"
+                artifactId = "ComposeComponentsDebug"
+                version = "0.3"
+                from(components["debug"])
             }
         }
     }
